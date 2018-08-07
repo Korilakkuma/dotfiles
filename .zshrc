@@ -6,9 +6,10 @@ setopt auto_cd
 setopt correct
 setopt cdable_vars
 
-if [ -z ".zsh_history" ] {
+if [ ! -e ".zsh_history" ]
+then
     touch .zsh_history
-}
+fi
 
 HISTFILE=~/.zsh_history
 SAVEHIST=1000
