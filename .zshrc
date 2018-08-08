@@ -22,3 +22,5 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOPATH/usr/local/go/bin
+
+eval $(direnv hook zsh)
