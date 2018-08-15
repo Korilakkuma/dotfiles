@@ -23,4 +23,11 @@ export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOPATH/usr/local/go/bin
 
-eval $(direnv hook zsh)
+which direnv > /dev/null
+
+if [ $? ]
+then
+    eval $(direnv hook zsh)
+elif
+    brew install direnv
+fi
