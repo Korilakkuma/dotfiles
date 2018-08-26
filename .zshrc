@@ -1,6 +1,9 @@
 autoload -U compinit
 compinit
 
+autoload -Uz colors
+colors
+
 setopt auto_pushd
 setopt auto_cd
 setopt correct
