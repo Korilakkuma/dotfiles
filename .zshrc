@@ -15,9 +15,8 @@ then
 fi
 
 HISTFILE=~/.zsh_history
-SAVEHIST=1000
-
-HISTSIZE=1000
+SAVEHIST=1000000
+HISTSIZE=1000000
 
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
