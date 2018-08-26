@@ -18,16 +18,19 @@ HISTSIZE=1000
 
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
+export LANG=ja_JP.UTF-8
+export PS1=MacBook-Pro%%\ 
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOPATH/usr/local/go/bin
 
-which direnv > /dev/null
-
-if [ $? ]
-then
-    eval $(direnv hook zsh)
-elif
-    brew install direnv
-fi
+# which direnv > /dev/null
+# 
+# if [ $? ]
+# then
+#     eval $(direnv hook zsh)
+# elif
+# then
+#     brew install direnv
+# fi
