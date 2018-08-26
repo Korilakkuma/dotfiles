@@ -1,5 +1,9 @@
-autoload -U compinit
+autoload -Uz compinit
 compinit
+
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+zstyle ':completion:*' ignore-parents parent pwd ..
+zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 
 autoload -Uz colors
 colors
