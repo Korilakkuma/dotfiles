@@ -30,6 +30,7 @@ alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 export LANG=ja_JP.UTF-8
 # export PS1=MacBook-Pro%%\ 
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+export NODE_PATH='/usr/local/lib/node_modules/'
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOPATH/usr/local/go/bin
