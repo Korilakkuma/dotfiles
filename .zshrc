@@ -17,6 +17,7 @@ setopt ignore_eof
 setopt print_eight_bit
 setopt no_flow_control
 setopt interactivecomments
+setopt auto_cd
 
 PROMPT="[MacBook-Pro] %~ %# "
 
