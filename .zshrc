@@ -16,6 +16,7 @@ setopt cdable_vars
 setopt ignore_eof
 setopt print_eight_bit
 setopt no_flow_control
+setopt interactivecomments
 
 PROMPT="[MacBook-Pro] %~ %# "
 
