@@ -29,7 +29,7 @@ PROMPT="[MacBook-Pro] %~ %# "
 
 if [ ! -e ".zsh_history" ]
 then
-    touch .zsh_history
+    touch ~/.zsh_history
 fi
 
 HISTFILE=~/.zsh_history
