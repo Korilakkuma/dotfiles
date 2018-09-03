@@ -47,6 +47,7 @@ export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOPATH/usr/local/go/bin
 export PATH=$PATH:$HOME/Library/Python/2.7/bin
+export PATH=$PATH:/usr/local/opt/openssl/bin
 
 # which direnv > /dev/null
 # 
