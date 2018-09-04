@@ -1,4 +1,5 @@
 set encoding=utf-8
+set nobackup
 
 set number
 set expandtab
