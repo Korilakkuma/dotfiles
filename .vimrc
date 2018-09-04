@@ -3,6 +3,7 @@ set nobackup
 set noswapfile
 set autoread
 set hidden
+set showcmd
 
 set number
 set expandtab
