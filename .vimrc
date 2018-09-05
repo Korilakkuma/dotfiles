@@ -6,16 +6,26 @@ set hidden
 set showcmd
 
 set number
+set cursorline
+"set cursorcolumn
+set virtualedit=onemore
+set smartindent
+set visualbell
+set showmatch
+set statusline=2
+set wildmode=list:longest
+
+nnoremap j gj
+nnoremap k gk
+
 set expandtab
 set tabstop=4
 set shiftwidth=4
 set autoindent
-set smartindent
 
 syntax on
 
 set nohlsearch
-set cursorline
 
 set list
 set listchars=tab:>.,trail:_,eol:↲,extends:>,precedes:<,nbsp:%
