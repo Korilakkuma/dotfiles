@@ -25,7 +25,14 @@ set tabstop=4
 set shiftwidth=4
 set autoindent
 
-set nohlsearch
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
+"set nohlsearch
+
 set nrformats=
 
 set wildmenu
