@@ -18,18 +18,14 @@ set wildmode=list:longest
 nnoremap j gj
 nnoremap k gk
 
+set list
+set listchars=tab:>.,trail:_,eol:↲,extends:>,precedes:<,nbsp:%
 set expandtab
 set tabstop=4
 set shiftwidth=4
 set autoindent
 
-syntax on
-
 set nohlsearch
-
-set list
-set listchars=tab:>.,trail:_,eol:↲,extends:>,precedes:<,nbsp:%
-
 set nrformats=
 
 set wildmenu
@@ -38,4 +34,6 @@ set wildmode=full
 set history=200
 
 set nocompatible
+
+syntax on
 filetype plugin on
