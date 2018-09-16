@@ -43,4 +43,16 @@ set history=200
 set nocompatible
 
 syntax on
+
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'leafgarland/typescript-vim'
+
+call vundle#end()
+
 filetype plugin on
