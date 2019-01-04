@@ -46,7 +46,24 @@ syntax on
 
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
+if has('vim_starting')
+    set nocompatible
+    set runtimepath+=~/.vim/bundle/neobundle.vim
+endif
+
+call neobundle#begin(expand('~/.vim/bundle'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+call neobundle#end()
+
+NeoBundleCheck
+
+if !has('vim_starting')
+    call neobundle#call_hook('on_source')
+endif
+
+" set rtp+=~/.vim/bundle/Vundle.vim
 
 " call vundle#begin()
 
