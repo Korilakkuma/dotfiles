@@ -54,6 +54,7 @@ endif
 call neobundle#begin(expand('~/.vim/bundle'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'leafgarland/typescript-vim'
 
 call neobundle#end()
 
