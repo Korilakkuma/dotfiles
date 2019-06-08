@@ -5,7 +5,13 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*' ignore-parents parent pwd ..
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr "%F{green}!"
+zstyle ':vcs_info:git:*' unstagedstr "%F{magenta}+"
+zstyle ':vcs_info:*' formats "%F{cyan}%c%u(%b)%f"
+zstyle ':vcs_info:*' actionformats '[%b|%a]'
 
+autoload -Uz vcs_info
 autoload -Uz colors
 colors
 
@@ -15,6 +21,7 @@ setopt correct
 setopt cdable_vars
 setopt ignore_eof
 setopt print_eight_bit
+setopt prompt_subst
 setopt no_flow_control
 setopt interactivecomments
 setopt auto_cd
@@ -26,7 +33,16 @@ setopt hist_ignore_space
 setopt hist_reduce_blanks
 setopt extended_glob
 
-PROMPT="[MacBook-Pro] %~ %# "
+precmd () { vcs_info }
+
+# PROMPT="%{$fg[green]%}[%n@%m]%{$reset_color%}"
+# PROMPT="%{$fg[green]%}[%n@MacBook-Pro]%{$reset_color%}"
+# PROMPT=$PROMPT"${vcs_info_msg_0_} %{${fg[green]}%}%}$%{${reset_color}%} "
+# RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}"
+
+PROMPT="[%n@MacBook-Pro] %~ ${vcs_info_msg_0_}
+$ "
+RPROMPT=
 
 if [ ! -e ".zsh_history" ]
 then
@@ -38,6 +54,9 @@ SAVEHIST=1000000
 HISTSIZE=1000000
 
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+alias mkdir="mkdir -p"
+alias hugod="hugo server -D"
+# alias vim=/usr/local/Cellar/macvim/8.1-155/bin/vim
 
 export LANG=ja_JP.UTF-8
 # export PS1=MacBook-Pro%%\
