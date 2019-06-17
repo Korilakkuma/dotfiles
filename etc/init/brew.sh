@@ -21,4 +21,6 @@ brew cast install iterm2
 brew cast install sketch
 brew cask install slack
 
+curl -L git.io/nodebrew | perl - setup
+
 brew cleanup
