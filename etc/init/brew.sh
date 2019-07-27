@@ -15,14 +15,15 @@ brew install vim
 brew install wget
 brew install zsh
 
+brew cast install adobe-creative-cloud
+brew cast install firefox
 brew cask install google-chrome
 brew cask install google-chrome-canary
-brew cast install firefox
-brew cast install opera
 brew cast install iterm2
+brew cask install libreoffice
+brew cast install opera
 brew cast install sketch
 brew cask install slack
-brew cask install libreoffice
 brew cask install vlc
 
 curl -L git.io/nodebrew | perl - setup
