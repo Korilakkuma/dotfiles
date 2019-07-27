@@ -60,7 +60,8 @@ alias hugod="hugo server -D"
 
 export LANG=ja_JP.UTF-8
 # export PS1=MacBook-Pro%%\
-export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:$HOME/.nodebrew/current/bin
 export NODE_PATH='/usr/local/lib/node_modules/'
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
