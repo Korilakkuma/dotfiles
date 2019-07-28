@@ -1,12 +1,12 @@
 filetype off
 
-let $VIMBUNDLE = '~/.vim/bundle'
+let $VIMBUNDLE = $HOME . '/.vim/bundle'
 let $NEOBUNDLEPATH = $VIMBUNDLE . '/neobundle.vim'
-let $MYVIMRC = '~/.vim/init.vim'
+let $MYVIMRC = $HOME . '/.vim/init.vim'
 
-if has('vim_starting')
-  set nocompatible
-endif
+" if has('vim_starting')
+"   set nocompatible
+" endif
 
 if stridx(&runtimepath, $NEOBUNDLEPATH) == -1
   command! NeoBundleInit try | call s:neobundle_init()
@@ -36,7 +36,7 @@ function! s:neobundle_init()
   cd $VIMBUNDLE
 
   if executable('git')
-    call system('git clone git://github.com/Shougo/neobundle.git')
+    call system('git clone git@github.com:Shougo/neobundle.vim.git')
 
     if v:shell_error
       echo 'neobundleinit: Git error.'
@@ -46,7 +46,7 @@ function! s:neobundle_init()
 
   set runtimepath& runtimepath+=$NEOBUNDLEPATH
 
-  call neobundle#begin(expand('~/.vim/bundle'))
+  call neobundle#begin(expand($VIMBUNDLE))
 
   NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundle 'Rip-Rip/clang_complete'
