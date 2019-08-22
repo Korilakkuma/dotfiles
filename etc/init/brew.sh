@@ -3,6 +3,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew update
 brew upgrade
 
+brew install composer
 brew install docker
 brew install ffmpeg
 brew install git
