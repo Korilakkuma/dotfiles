@@ -11,6 +11,7 @@ brew install go
 brew install hugo
 brew install imagemagick
 brew install jq
+brew install mysql
 brew install tmux
 brew install vim
 brew install wget
