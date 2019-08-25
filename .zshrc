@@ -40,7 +40,7 @@ precmd () { vcs_info }
 # PROMPT=$PROMPT"${vcs_info_msg_0_} %{${fg[green]}%}%}$%{${reset_color}%} "
 # RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}"
 
-PROMPT="[%n@MacBook-Pro] %~ ${vcs_info_msg_0_}
+PROMPT="[%n@MacBook-Air] %~ ${vcs_info_msg_0_}
 $ "
 RPROMPT=
 
