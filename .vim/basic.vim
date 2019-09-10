@@ -52,3 +52,9 @@ augroup source-vimrc
     autocmd BufWritePost *vimrc source $MYVIMRC | set foldmethod=marker
     autocmd BufWritePost *gvimrc if has('gui_running') source $MYGVIMRC
 augroup END
+
+augroup auto_comment_off
+  autocmd!
+    autocmd BufEnter * setlocal formatoptions-=r
+    autocmd BufEnter * setlocal formatoptions-=o
+augroup END
