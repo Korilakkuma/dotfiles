@@ -58,3 +58,9 @@ augroup auto_comment_off
     autocmd BufEnter * setlocal formatoptions-=r
     autocmd BufEnter * setlocal formatoptions-=o
 augroup END
+
+augroup MyXML
+  autocmd!
+   autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>
+   autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
+augroup END
