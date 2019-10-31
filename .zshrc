@@ -40,8 +40,12 @@ precmd () { vcs_info }
 # PROMPT=$PROMPT"${vcs_info_msg_0_} %{${fg[green]}%}%}$%{${reset_color}%} "
 # RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}"
 
-PROMPT="[%n@MacBook-Air] %~ ${vcs_info_msg_0_}
-$ "
+# PROMPT='[%n@%m] %~ ${vcs_info_msg_0_}
+# $ '
+# RPROMPT=
+
+PROMPT='[%n@%~] ${vcs_info_msg_0_}
+$ '
 RPROMPT=
 
 if [ ! -e ".zsh_history" ]
