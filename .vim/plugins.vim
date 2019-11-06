@@ -52,6 +52,7 @@ function! s:neobundle_init()
   NeoBundle 'Rip-Rip/clang_complete'
   NeoBundle 'leafgarland/typescript-vim'
   NeoBundle 'fatih/vim-go'
+  NeoBundle 'posva/vim-vue'
 
   let g:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
 
