@@ -4,6 +4,7 @@ brew update
 brew upgrade
 
 brew install clang-format
+brew install cmake
 brew install composer
 brew install docker
 brew install ffmpeg
