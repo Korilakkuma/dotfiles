@@ -75,6 +75,9 @@ export PATH=$PATH:$HOME/Library/Python/2.7/bin
 export PATH=$PATH:/usr/local/opt/openssl/bin
 export CLICOLOR=1
 
+# for emcc
+source $HOME/Sites/GitHub/emsdk/emsdk_env.sh
+
 # which direnv > /dev/null
 #
 # if [ $? ]
