@@ -66,7 +66,8 @@ export LANG=ja_JP.UTF-8
 # export PS1=MacBook-Pro%%\
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:$HOME/.nodebrew/current/bin
-export SDKROOT=`xcrun --sdk macosx --show-sdk-path`
+# export SDKROOT=$HOME/Development/MacOSX-SDKs/MacOSX10.9.sdk
+# export SDKROOT=`xcrun --sdk macosx --show-sdk-path`
 export NODE_PATH='/usr/local/lib/node_modules/'
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
@@ -77,7 +78,7 @@ export PATH=$PATH:/usr/local/opt/openssl/bin
 export CLICOLOR=1
 
 # for emcc
-source $HOME/Sites/GitHub/emsdk/emsdk_env.sh
+# source $HOME/Sites/GitHub/emsdk/emsdk_env.sh
 
 # which direnv > /dev/null
 #
