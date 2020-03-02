@@ -13,6 +13,7 @@ brew install go
 brew install hugo
 brew install imagemagick
 brew install jq
+brew install lv
 brew install mysql
 brew install nkf
 brew install pkgconfig
