@@ -51,11 +51,11 @@ function! s:neobundle_init()
   NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundle 'Rip-Rip/clang_complete'
   NeoBundle 'leafgarland/typescript-vim'
+  NeoBundle 'peitalin/vim-jsx-typescript'
   NeoBundle 'fatih/vim-go'
   NeoBundle 'posva/vim-vue'
 
   let g:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
-
   call neobundle#end()
 
   NeoBundleCheck
@@ -83,5 +83,21 @@ endfunction
 " Plugin 'leafgarland/typescript-vim'
 
 " call vundle#end()
+
+" set filetypes as typescript.tsx
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
+
+" dark red
+hi tsxTagName guifg=#E06C75
+
+" orange
+hi tsxCloseString guifg=#F99575
+hi tsxCloseTag guifg=#F99575
+hi tsxCloseTagName guifg=#F99575
+hi tsxAttributeBraces guifg=#F99575
+hi tsxEqual guifg=#F99575
+
+" yellow
+hi tsxAttrib guifg=#F8BD7F cterm=italic
 
 filetype plugin on
