@@ -18,6 +18,7 @@ brew install mysql
 brew install nkf
 brew install pkgconfig
 brew install tmux
+brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 brew install vim
 brew install wget
 brew install zsh
