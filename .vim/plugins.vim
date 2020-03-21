@@ -49,13 +49,13 @@ function! s:neobundle_init()
   call neobundle#begin(expand($VIMBUNDLE))
 
   NeoBundleFetch 'Shougo/neobundle.vim'
-  NeoBundle 'Rip-Rip/clang_complete'
+  NeoBundle 'justmao945/vim-clang'
+  " NeoBundle 'Rip-Rip/clang_complete'
   NeoBundle 'leafgarland/typescript-vim'
   NeoBundle 'peitalin/vim-jsx-typescript'
   NeoBundle 'fatih/vim-go'
   NeoBundle 'posva/vim-vue'
 
-  let g:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
   call neobundle#end()
 
   NeoBundleCheck
@@ -83,6 +83,15 @@ endfunction
 " Plugin 'leafgarland/typescript-vim'
 
 " call vundle#end()
+
+let g:clang_c_options = '-std=c11'
+let g:clang_cpp_options = '-std=c++1z -stdlib=libc++ –pedantic-errors'
+let g:clang_format_auto = 1
+let g:clang_format_style = 'Google'
+let g:clang_check_syntax_auto = 1
+
+" let g:clang_library_path='/usr/lib/llvm-3.8/lib'
+" let g:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
 
 " set filetypes as typescript.tsx
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
