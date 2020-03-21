@@ -71,12 +71,20 @@ export PATH=$PATH:$HOME/.nodebrew/current/bin
 # export SDKROOT=`xcrun --sdk macosx --show-sdk-path`
 export NODE_PATH='/usr/local/lib/node_modules/'
 export GOPATH=$HOME/.go
+export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOPATH/usr/local/go/bin
 export PATH=$PATH:$HOME/.composer/vendor/bin
-export PATH=$PATH:$HOME/Library/Python/2.7/bin
+# export PATH=$PATH:$HOME/Library/Python/2.7/bin
+# export PATH=$PATH:/Library/Frameworks/Python.framework/Versions/3.2/bin
 export PATH=$PATH:/usr/local/opt/openssl/bin
 export CLICOLOR=1
+
+if [ -d "$PYENV_ROOT" ]
+then
+    export PATH=$PATH:$PYENV_ROOT/bin
+    eval "$(pyenv init -)"
+fi
 
 # for emcc
 # source $HOME/Sites/GitHub/emsdk/emsdk_env.sh
