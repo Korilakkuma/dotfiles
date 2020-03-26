@@ -64,6 +64,7 @@ alias ctags="`brew --prefix`/bin/ctags"
 # alias vim=/usr/local/Cellar/macvim/8.1-155/bin/vim
 
 export LANG=ja_JP.UTF-8
+export EDITOR=vim
 # export PS1=MacBook-Pro%%\
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:$HOME/.nodebrew/current/bin
