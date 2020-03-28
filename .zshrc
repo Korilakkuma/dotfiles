@@ -87,6 +87,8 @@ then
     eval "$(pyenv init -)"
 fi
 
+eval "$(rbenv init -)"
+
 # for emcc
 # source $HOME/Sites/GitHub/emsdk/emsdk_env.sh
 
