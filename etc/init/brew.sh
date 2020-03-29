@@ -6,6 +6,7 @@ brew upgrade
 brew install clang-format
 brew install cmake
 brew install composer
+brew install direnv
 brew install docker
 brew install ffmpeg
 brew install git
