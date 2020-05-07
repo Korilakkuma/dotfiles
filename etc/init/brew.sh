@@ -34,6 +34,7 @@ brew cask install google-chrome
 # brew cask install google-chrome-canary
 brew cask install iterm2
 brew cask install libreoffice
+brew cask install microsoft-edge
 # brew cask install opera
 brew cask install sketch
 brew cask install slack
