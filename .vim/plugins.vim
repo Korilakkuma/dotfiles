@@ -49,6 +49,7 @@ function! s:neobundle_init()
   call neobundle#begin(expand($VIMBUNDLE))
 
   NeoBundleFetch 'Shougo/neobundle.vim'
+  NeoBundle 'editorconfig/editorconfig-vim'
   NeoBundle 'justmao945/vim-clang'
   " NeoBundle 'Rip-Rip/clang_complete'
   NeoBundle 'leafgarland/typescript-vim'
