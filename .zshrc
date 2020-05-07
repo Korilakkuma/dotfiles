@@ -1,3 +1,5 @@
+bindkey -e
+
 autoload -Uz compinit
 compinit
 
@@ -44,7 +46,7 @@ precmd () { vcs_info }
 # $ '
 # RPROMPT=
 
-PROMPT='[%n@%~] ${vcs_info_msg_0_}
+PROMPT='[korilakkuma@%~] ${vcs_info_msg_0_}
 $ '
 RPROMPT=
 
