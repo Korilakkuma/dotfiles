@@ -12,7 +12,7 @@ set cursorline
 "set cursorcolumn
 set virtualedit=onemore
 set smartindent
-set visualbell
+set visualbell t_vb=
 set showmatch
 set statusline=2
 set wildmode=list:longest
