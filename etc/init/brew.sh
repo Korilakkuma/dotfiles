@@ -8,6 +8,7 @@ brew install cmake
 brew install composer
 brew install direnv
 brew install docker
+brew install editorconfig
 brew install ffmpeg
 brew install git
 brew install go
