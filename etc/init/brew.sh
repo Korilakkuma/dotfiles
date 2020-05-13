@@ -17,6 +17,7 @@ brew install imagemagick
 brew install jq
 brew install lv
 brew install mysql
+brew install nginx
 brew install nkf
 brew install pkgconfig
 brew install pyenv
