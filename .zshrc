@@ -68,6 +68,7 @@ alias ctags="`brew --prefix`/bin/ctags"
 export LANG=ja_JP.UTF-8
 export EDITOR=vim
 # export PS1=MacBook-Pro%%\
+export PATH=$PATH:$HOME/bin
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:$HOME/.nodebrew/current/bin
 # export SDKROOT=$HOME/Development/MacOSX-SDKs/MacOSX10.9.sdk
@@ -80,7 +81,10 @@ export PATH=$PATH:$GOPATH/usr/local/go/bin
 export PATH=$PATH:$HOME/.composer/vendor/bin
 # export PATH=$PATH:$HOME/Library/Python/2.7/bin
 # export PATH=$PATH:/Library/Frameworks/Python.framework/Versions/3.2/bin
-export PATH=$PATH:/usr/local/opt/openssl/bin
+export PATH=$PATH:/usr/local/opt/openssl@1.1/bin
+export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
 export CLICOLOR=1
 
 if [ -d "$PYENV_ROOT" ]
