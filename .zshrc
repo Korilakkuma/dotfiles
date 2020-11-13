@@ -107,3 +107,4 @@ eval "$(rbenv init -)"
 # then
 #     brew install direnv
 # fi
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
