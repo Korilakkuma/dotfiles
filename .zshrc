@@ -107,4 +107,12 @@ eval "$(rbenv init -)"
 # then
 #     brew install direnv
 # fi
+
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+
+function llvm() {
+  export PATH=$PATH:/usr/local/opt/llvm/bin
+  export LDFLAGS="-L/usr/local/opt/llvm/lib"
+  export CPPFLAGS="-I/usr/local/opt/llvm/include"
+  unset -f llvm
+}

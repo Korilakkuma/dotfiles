@@ -17,6 +17,7 @@ brew install hugo
 brew install imagemagick
 brew install jq
 brew install lv
+brew install llvm
 brew install mysql
 brew install nginx
 brew install nkf
