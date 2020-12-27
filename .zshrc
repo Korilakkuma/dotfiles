@@ -60,9 +60,10 @@ SAVEHIST=1000000
 HISTSIZE=1000000
 
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-alias mkdir="mkdir -p"
-alias hugod="hugo server -D"
 alias ctags="`brew --prefix`/bin/ctags"
+alias global="curl ifconfig.moe"
+alias hugod="hugo server -D"
+alias mkdir="mkdir -p"
 # alias vim=/usr/local/Cellar/macvim/8.1-155/bin/vim
 
 export LANG=ja_JP.UTF-8
