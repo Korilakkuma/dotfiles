@@ -64,6 +64,9 @@ alias ctags="`brew --prefix`/bin/ctags"
 alias global="curl ifconfig.moe"
 alias hugod="hugo server -D"
 alias mkdir="mkdir -p"
+alias xsound1="curl -s 'https://api.github.com/repos/Korilakkuma/XSound/stargazers?page=1&per_page=100' -H 'Accept: application/vnd.github.v3.star+json' | jq -r '.[].starred_at'"
+alias xsound2="curl -s 'https://api.github.com/repos/Korilakkuma/XSound/stargazers?page=2&per_page=100' -H 'Accept: application/vnd.github.v3.star+json' | jq -r '.[].starred_at'"
+
 # alias vim=/usr/local/Cellar/macvim/8.1-155/bin/vim
 
 export LANG=ja_JP.UTF-8
