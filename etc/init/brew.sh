@@ -1,4 +1,4 @@
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 brew update
 brew upgrade
@@ -31,18 +31,18 @@ brew install vim
 brew install wget
 brew install zsh
 
-# brew cask install adobe-creative-cloud
-brew cask install docker
-brew cask install firefox
-brew cask install google-chrome
-# brew cask install google-chrome-canary
-brew cask install iterm2
-brew cask install libreoffice
-brew cask install microsoft-edge
-# brew cask install opera
-brew cask install sketch
-brew cask install slack
-brew cask install vlc
+brew install --cask adobe-creative-cloud
+brew install --cask docker
+brew install --cask firefox
+brew install --cask google-chrome
+brew install --cask google-chrome-canary
+brew install --cask iterm2
+brew install --cask libreoffice
+brew install --cask microsoft-edge
+brew install --cask opera
+brew install --cask sketch
+brew install --cask slack
+brew install --cask vlc
 
 curl -L git.io/nodebrew | perl - setup
 
