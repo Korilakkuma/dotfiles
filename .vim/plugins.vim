@@ -4,9 +4,10 @@ let $VIMBUNDLE = $HOME . '/.vim/bundle'
 let $NEOBUNDLEPATH = $VIMBUNDLE . '/neobundle.vim'
 let $MYVIMRC = $HOME . '/.vim/init.vim'
 
-" if has('vim_starting')
-"   set nocompatible
-" endif
+if has('vim_starting')
+  set runtimepath& runtimepath+=$NEOBUNDLEPATH
+  " set nocompatible
+endif
 
 if stridx(&runtimepath, $NEOBUNDLEPATH) == -1
   command! NeoBundleInit try | call s:neobundle_init()
@@ -19,10 +20,6 @@ if stridx(&runtimepath, $NEOBUNDLEPATH) == -1
     \| echohl WaringMsg
     \| echo "You should do ':NeoBundleInit' at first !"
     \| echohl None
-endif
-
-if !has('vim_starting')
-    call neobundle#call_hook('on_source')
 endif
 
 function! s:neobundle_init()
@@ -43,8 +40,6 @@ function! s:neobundle_init()
       " throw 'neobundleinit: Git error.'
     endif
   endif
-
-  set runtimepath& runtimepath+=$NEOBUNDLEPATH
 
   call neobundle#begin(expand($VIMBUNDLE))
 
@@ -112,4 +107,8 @@ hi tsxEqual guifg=#F99575
 " yellow
 hi tsxAttrib guifg=#F8BD7F cterm=italic
 
-filetype plugin on
+filetype plugin indent on
+
+if !has('vim_starting')
+  call neobundle#call_hook('on_source')
+endif
