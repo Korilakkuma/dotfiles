@@ -91,14 +91,6 @@ export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
 export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
 export CLICOLOR=1
 
-if [ -d "$PYENV_ROOT" ]
-then
-    export PATH=$PATH:$PYENV_ROOT/bin
-    eval "$(pyenv init -)"
-fi
-
-eval "$(rbenv init -)"
-
 # for emcc
 # source $HOME/Sites/GitHub/emsdk/emsdk_env.sh
 
