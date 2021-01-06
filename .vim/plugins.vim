@@ -1,4 +1,4 @@
-filetype off
+" filetype off
 
 let $VIMBUNDLE = $HOME . '/.vim/bundle'
 let $NEOBUNDLEPATH = $VIMBUNDLE . '/neobundle.vim'

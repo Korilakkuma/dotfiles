@@ -43,7 +43,7 @@ set wildmode=full
 
 set history=200
 
-set nocompatible
+" set nocompatible
 
 syntax on
 
