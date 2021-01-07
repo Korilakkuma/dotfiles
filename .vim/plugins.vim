@@ -9,7 +9,7 @@ if has('vim_starting')
   " set nocompatible
 endif
 
-if stridx(&runtimepath, $NEOBUNDLEPATH) == -1
+if !isdirectory($NEOBUNDLEPATH)
   command! NeoBundleInit try | call s:neobundle_init()
     \| catch /^neobundleinit:/
       \| echohl ErrorMsg
