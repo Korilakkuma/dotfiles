@@ -5,8 +5,11 @@ let $NEOBUNDLEPATH = $VIMBUNDLE . '/neobundle.vim'
 let $MYVIMRC = $HOME . '/.vim/init.vim'
 
 if has('vim_starting')
+  if &compatible
+    set nocompatible
+  endif
+
   set runtimepath& runtimepath+=$NEOBUNDLEPATH
-  " set nocompatible
 endif
 
 if !isdirectory($NEOBUNDLEPATH)
