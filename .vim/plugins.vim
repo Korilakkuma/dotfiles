@@ -39,8 +39,7 @@ function! s:neobundle_init()
     call system('git clone git@github.com:Shougo/neobundle.vim.git')
 
     if v:shell_error
-      echo 'neobundleinit: Git error.'
-      " throw 'neobundleinit: Git error.'
+      throw 'neobundleinit: Git error.'
     endif
   endif
 
