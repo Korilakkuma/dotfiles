@@ -94,7 +94,8 @@ let g:clang_check_syntax_auto = 1
 " let g:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
 
 " set filetypes as typescript.tsx
-autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
+" autocmd BufNewFile,BufRead *.tsx,*.jsx
+set filetype=typescript.tsx
 
 " dark red
 hi tsxTagName guifg=#E06C75
