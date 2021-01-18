@@ -65,6 +65,7 @@ alias global="curl ifconfig.moe"
 alias glog="git log --oneline --pretty=format:'%h [%ad] %d %s <%an>' --date=format:'%Y-%m-%d %H:%M:%S'"
 alias hugod="hugo server -D"
 alias mkdir="mkdir -p"
+alias tmux="tmux -2 new-session \; source-file ~/.tmux/new-session"
 alias xsound1="curl -s 'https://api.github.com/repos/Korilakkuma/XSound/stargazers?page=1&per_page=100' -H 'Accept: application/vnd.github.v3.star+json' | jq -r '.[].starred_at'"
 alias xsound2="curl -s 'https://api.github.com/repos/Korilakkuma/XSound/stargazers?page=2&per_page=100' -H 'Accept: application/vnd.github.v3.star+json' | jq -r '.[].starred_at'"
 
