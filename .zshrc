@@ -116,3 +116,8 @@ function llvm() {
   export CPPFLAGS="-I/usr/local/opt/llvm/include"
   unset -f llvm
 }
+
+function ccomp() {
+  rm -rf ~/.zcompdump
+  exec $SHELL
+}
