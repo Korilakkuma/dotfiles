@@ -53,6 +53,7 @@ function! s:neobundle_init()
   NeoBundle 'peitalin/vim-jsx-typescript'
   NeoBundle 'fatih/vim-go'
   NeoBundle 'posva/vim-vue'
+  NeoBundle 'mattn/vim-lsp-settings'
 
   call neobundle#end()
 
