@@ -19,6 +19,7 @@ brew install jq
 brew install lv
 brew install llvm
 brew install mysql
+brew install neovim
 brew install nginx
 brew install nkf
 brew install pkgconfig
