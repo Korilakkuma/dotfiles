@@ -60,8 +60,8 @@ SAVEHIST=1000000
 HISTSIZE=1000000
 
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-alias ctags="`brew --prefix`/bin/ctags"
-alias cctags="ctags -R -f $HOME/.vim/systags /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/*.h"
+# alias ctags="`brew --prefix`/bin/ctags"
+# alias cctags="ctags -R -f $HOME/.vim/systags /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/*.h"
 alias global="curl ifconfig.moe"
 alias glog="git log --oneline --pretty=format:'%h [%ad] %d %s <%an>' --date=format:'%Y-%m-%d %H:%M:%S'"
 alias history="history 0"
