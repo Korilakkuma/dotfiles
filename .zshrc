@@ -69,6 +69,7 @@ alias hugod="hugo server -D"
 alias inet="ifconfig -a | grep -Eo 'inet [0-9.]+'"
 alias mkdir="mkdir -p"
 alias tmux="tmux -2 new-session \; source-file ~/.tmux/new-session"
+alias vim="nvim"
 alias xsound1="curl -s 'https://api.github.com/repos/Korilakkuma/XSound/stargazers?page=1&per_page=100' -H 'Accept: application/vnd.github.v3.star+json' | jq -r '.[].starred_at'"
 alias xsound2="curl -s 'https://api.github.com/repos/Korilakkuma/XSound/stargazers?page=2&per_page=100' -H 'Accept: application/vnd.github.v3.star+json' | jq -r '.[].starred_at'"
 
