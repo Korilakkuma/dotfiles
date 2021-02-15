@@ -74,8 +74,6 @@ function! s:neobundle_init()
   echomsg 'Finish !'
 endfunction
 
-set tags=.tags;$HOME
-
 """ vim-clang
 let g:neocomplete#enable_at_startup = 1
 

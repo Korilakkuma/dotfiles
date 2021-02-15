@@ -45,7 +45,7 @@ set history=200
 
 " set nocompatible
 
-syntax on
+set tags=$HOME/.vim/systags
 
 augroup source-vimrc
   autocmd!
