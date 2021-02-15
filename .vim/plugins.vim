@@ -74,16 +74,22 @@ function! s:neobundle_init()
   echomsg 'Finish !'
 endfunction
 
-" set rtp+=~/.vim/bundle/Vundle.vim
-
-" call vundle#begin()
-
-" Plugin 'gmarik/Vundle.vim'
-" Plugin 'leafgarland/typescript-vim'
-
-" call vundle#end()
-
 set tags=.tags;$HOME
+
+""" vim-clang
+let g:neocomplete#enable_at_startup = 1
+
+if !exists('g:neocomplete#force_omni_input_patterns')
+  let g:neocomplete#force_omni_input_patterns = {}
+endif
+
+let g:neocomplete#force_overwrite_completefunc = 1
+let g:neocomplete#force_omni_input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)\w*'
+let g:neocomplete#force_omni_input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
+
+let g:clang_auto = 0
+let g:clang_c_completeopt   = 'menuone'
+let g:clang_cpp_completeopt = 'menuone'
 
 let g:clang_c_options = '-std=c11'
 let g:clang_cpp_options = '-std=c++1z -stdlib=libc++ –pedantic-errors'
@@ -91,27 +97,29 @@ let g:clang_format_auto = 1
 let g:clang_format_style = 'Google'
 let g:clang_check_syntax_auto = 1
 
-" let g:clang_library_path='/usr/lib/llvm-3.8/lib'
-" let g:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
+let g:clang_library_path='/usr/lib/llvm-3.8/lib'
+let g:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
+"""
 
 " set filetypes as typescript.tsx
 " autocmd BufNewFile,BufRead *.tsx,*.jsx
 set filetype=typescript.tsx
 
 " dark red
-hi tsxTagName guifg=#E06C75
+" hi tsxTagName guifg=#E06C75
 
 " orange
-hi tsxCloseString guifg=#F99575
-hi tsxCloseTag guifg=#F99575
-hi tsxCloseTagName guifg=#F99575
-hi tsxAttributeBraces guifg=#F99575
-hi tsxEqual guifg=#F99575
+" hi tsxCloseString guifg=#F99575
+" hi tsxCloseTag guifg=#F99575
+" hi tsxCloseTagName guifg=#F99575
+" hi tsxAttributeBraces guifg=#F99575
+" hi tsxEqual guifg=#F99575
 
 " yellow
-hi tsxAttrib guifg=#F8BD7F cterm=italic
+" hi tsxAttrib guifg=#F8BD7F cterm=italic
 
 filetype plugin indent on
+syntax on
 
 if !has('vim_starting')
   call neobundle#call_hook('on_source')
