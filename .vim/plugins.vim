@@ -120,5 +120,5 @@ filetype plugin indent on
 syntax on
 
 if !has('vim_starting')
-  call neobundle#call_hook('on_source')
+  " call neobundle#call_hook('on_source')
 endif
