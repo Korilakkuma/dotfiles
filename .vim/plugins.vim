@@ -116,9 +116,11 @@ set filetype=typescript.tsx
 " yellow
 " hi tsxAttrib guifg=#F8BD7F cterm=italic
 
+" autocmd BufNewFile,BufRead *.tsx,*.jsx
+set filetype=typescript.tsx
 filetype plugin indent on
 syntax on
 
 if !has('vim_starting')
-  " call neobundle#call_hook('on_source')
+  call neobundle#call_hook('on_source')
 endif
