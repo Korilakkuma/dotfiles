@@ -1,32 +1,13 @@
-" filetype off
-
 let $VIMBUNDLE = $HOME . '/.vim/bundle'
-let $NEOBUNDLEPATH = $VIMBUNDLE . '/neobundle.vim'
+let $VUNDLEPATH = $VIMBUNDLE . '/Vundle.vim'
 let $MYVIMRC = $HOME . '/.vim/init.vim'
 
-if has('vim_starting')
-  if &compatible
-    set nocompatible
-  endif
+filetype off
 
-  set runtimepath& runtimepath+=$NEOBUNDLEPATH
-endif
+set rtp+=$VUNDLEPATH
 
-if !isdirectory($NEOBUNDLEPATH)
-  command! NeoBundleInit try | call s:neobundle_init()
-    \| catch /^neobundleinit:/
-      \| echohl ErrorMsg
-      \| echomsg v:exception
-      \| endtry
-
-  autocmd! VimEnter * redraw
-    \| echohl WaringMsg
-    \| echo "You should do ':NeoBundleInit' at first !"
-    \| echohl None
-endif
-
-function! s:neobundle_init()
-  redraw | echo "Installing neobundle.vim ..."
+if !isdirectory($VUNDLEPATH)
+  redraw | echo "Installing Vundle.vim ..."
 
   if !isdirectory($VIMBUNDLE)
     call mkdir($VIMBUNDLE, 'p')
@@ -36,67 +17,30 @@ function! s:neobundle_init()
   cd $VIMBUNDLE
 
   if executable('git')
-    call system('git clone git@github.com:Shougo/neobundle.vim.git')
+    echo "git clone https://github.com/VundleVim/Vundle.vim.git"
+
+    call system('git clone https://github.com/VundleVim/Vundle.vim.git')
 
     if v:shell_error
-      throw 'neobundleinit: Git error.'
+      throw 'Git error.'
     endif
+
+    echo "Git clone is successful !"
   endif
-
-  call neobundle#begin(expand($VIMBUNDLE))
-
-  NeoBundleFetch 'Shougo/neobundle.vim'
-  NeoBundle 'editorconfig/editorconfig-vim'
-  NeoBundle 'justmao945/vim-clang'
-  NeoBundle 'leafgarland/typescript-vim'
-  NeoBundle 'fatih/vim-go'
-  NeoBundle 'mattn/vim-lsp-settings'
-
-  call neobundle#end()
-
-  NeoBundleCheck
-
-  try
-    echo printf("Reloading '%s'", $MYVIMRC)
-    source $MYVIMRC
-  catch
-    echohl ErrorMsg
-    echomsg 'neobundleinit: $MYVIMRC: could not source'
-    echohl None
-    return 0
-  finally
-    echomsg 'Installed neobundle.vim'
-  endtry
-
-  echomsg 'Finish !'
-endfunction
-
-" Plugin Settings
-
-""" vim-clang
-let g:neocomplete#enable_at_startup = 1
-
-if !exists('g:neocomplete#force_omni_input_patterns')
-  let g:neocomplete#force_omni_input_patterns = {}
 endif
 
-let g:neocomplete#force_overwrite_completefunc = 1
-let g:neocomplete#force_omni_input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)\w*'
-let g:neocomplete#force_omni_input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
+call vundle#begin()
 
-let g:clang_auto = 0
-let g:clang_c_completeopt   = 'menuone'
-let g:clang_cpp_completeopt = 'menuone'
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'justmao945/vim-clang'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'fatih/vim-go'
+Plugin 'mattn/vim-lsp-settings'
 
-let g:clang_c_options = '-std=c11'
-let g:clang_cpp_options = '-std=c++1z -stdlib=libc++ –pedantic-errors'
-let g:clang_format_auto = 1
-let g:clang_format_style = 'Google'
-let g:clang_check_syntax_auto = 1
+call vundle#end()
 
-let g:clang_library_path='/usr/lib/llvm-3.8/lib'
-let g:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
-"""
+" Plugin Settings
 
 """ typescript-vim
 " autocmd BufNewFile,BufRead *.tsx,*.jsx
@@ -107,7 +51,3 @@ set filetype=typescript.tsx
 
 filetype plugin indent on
 syntax on
-
-if !has('vim_starting')
-  call neobundle#call_hook('on_source')
-endif
