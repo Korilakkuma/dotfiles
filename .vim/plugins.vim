@@ -25,7 +25,8 @@ if !isdirectory($VUNDLEPATH)
       throw 'Git error.'
     endif
 
-    echo "Git clone is successful !"
+    echomsg 'Installed Vundle.vim'
+    echomsg "You should do ':PluginInstall' at next !"
   endif
 endif
 
@@ -33,10 +34,34 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'editorconfig/editorconfig-vim'
+
+Plugin 'Shougo/deoplete.nvim'
+
+if !has('nvim')
+  Plugin 'roxma/nvim-yarp'
+  Plugin 'roxma/vim-hug-neovim-rpc'
+endif
+
+Plugin 'Shougo/neosnippet.vim'
+Plugin 'Shougo/neosnippet-snippets'
+Plugin 'Shougo/neocomplete.vim'
+
+" for Language (C/C++, TypeScript, Go, HTML/CSS)
 Plugin 'justmao945/vim-clang'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'fatih/vim-go'
+Plugin 'alvan/vim-closetag'
+
+" for Linter, Formatter
 Plugin 'mattn/vim-lsp-settings'
+
+" for git
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+
+" for utils
+Plugin 'preservim/nerdtree'
+Plugin 'vim-airline/vim-airline'
 
 call vundle#end()
 
