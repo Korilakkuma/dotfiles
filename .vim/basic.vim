@@ -47,6 +47,8 @@ set history=200
 
 set tags=$HOME/.vim/systags
 
+set shell=/usr/local/bin/zsh
+
 augroup source-vimrc
   autocmd!
     autocmd BufWritePost *vimrc source $MYVIMRC | set foldmethod=marker
