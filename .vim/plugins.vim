@@ -44,9 +44,9 @@ endif
 
 Plugin 'Shougo/neosnippet.vim'
 Plugin 'Shougo/neosnippet-snippets'
-Plugin 'Shougo/neocomplete.vim'
 
 " for Language (C/C++, TypeScript, Go, HTML/CSS)
+" Plugin 'Shougo/neocomplete.vim'
 Plugin 'justmao945/vim-clang'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'fatih/vim-go'
@@ -66,6 +66,34 @@ Plugin 'vim-airline/vim-airline'
 call vundle#end()
 
 " Plugin Settings
+
+""" netrw
+let g:netrw_liststyle=1
+let g:netrw_banner=0
+let g:netrw_sizestyle='H'
+let g:netrw_preview=1
+"""
+
+""" neocomplete
+" autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+" autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+" autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+" autocmd FileType javascript,typescript setlocal omnifunc=javascriptcomplete#CompleteJS
+"""
+
+""" vim-clang
+let g:neocomplete#enable_at_startup = 1
+
+if !exists('g:neocomplete#force_omni_input_patterns')
+  let g:neocomplete#force_omni_input_patterns = {}
+endif
+
+let g:neocomplete#force_overwrite_completefunc = 1
+let g:neocomplete#force_omni_input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
+let g:neocomplete#force_omni_input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+let g:clang_c_options = '-std=c11'
+let g:clang_cpp_options = '-std=c++11 -stdlib=libc++'
+"""
 
 """ typescript-vim
 " autocmd BufNewFile,BufRead *.tsx,*.jsx
