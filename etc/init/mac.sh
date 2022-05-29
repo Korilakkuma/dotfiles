@@ -1,0 +1,54 @@
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+brew update
+brew upgrade
+
+brew install binutils
+brew install clang-format
+brew install cloc
+brew install cmake
+brew install composer
+brew install coreutils
+brew install docker
+brew install ffmpeg
+brew install gawk
+brew install gdb
+brew install git
+brew install gnu-sed
+brew install go
+brew install htop
+brew install hugo
+brew install imagemagick
+brew install jq
+brew install libomp
+brew install llvm
+brew install lsusb
+brew install lv
+brew install mysql
+brew install nginx
+brew install nkf
+brew install pkgconfig
+brew install pstree
+brew install qemu
+brew install simh
+brew install telnet
+brew install tmux
+brew install tree
+brew install vim
+brew install wget
+brew install xquartz
+brew install zplug
+brew install zsh
+
+brew install --cask adobe-creative-cloud
+brew install --cask docker
+brew install --cask firefox
+brew install --cask google-chrome
+brew install --cask google-chrome-canary
+brew install --cask iterm2
+brew install --cask microsoft-edge
+brew install --cask opera
+brew install --cask slack
+
+curl -fsSL https://fnm.vercel.app/install | zsh
+curl -fsSL https://get.deta.dev/cli.sh | sh
