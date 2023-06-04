@@ -4,7 +4,17 @@ export CLICOLOR=1
 
 case $OSTYPE in
   darwin* )
-    export ZPLUG_HOME=/usr/local/opt/zplug
+    PROCESSOR=$(uname -p)
+
+    if [ "${PROCESSOR}" = "arm" ]
+    then
+      # Apple Silicon
+      export ZPLUG_HOME=/opt/homebrew/opt/zplug
+    else
+      # Intel Mac
+      export ZPLUG_HOME=/usr/local/opt/zplug
+    fi
+
     export PATH=$PATH:$HOME/.fnm
     ;;
   linux* )
