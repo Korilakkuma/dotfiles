@@ -1,5 +1,8 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+# for Apple Silicon
+export PATH=$PATH:/opt/homebrew/bin
+
 brew update
 brew upgrade
 

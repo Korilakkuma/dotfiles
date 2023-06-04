@@ -16,6 +16,9 @@ case $OSTYPE in
     ;;
 esac
 
+# for Apple Silicon
+export PATH=$PATH:/opt/homebrew/bin
+
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/.composer/vendor/bin
