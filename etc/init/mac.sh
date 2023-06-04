@@ -14,7 +14,7 @@ brew install composer
 brew install coreutils
 brew install docker
 brew install ffmpeg
-brew install gawk
+# brew install gawk
 brew install gdb
 brew install git
 brew install gnu-sed
