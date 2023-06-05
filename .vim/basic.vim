@@ -45,6 +45,9 @@ set ignorecase
 set incsearch
 set smartcase
 
+" for 'redrawtime' exceeded, syntax highlighting disabled
+set re=0
+
 " Key bindings
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 nmap ,sudo :w !sudo tee %<CR>
