@@ -51,6 +51,21 @@ function ccomp() {
   exec $SHELL
 }
 
+function cpuinfo() {
+  case $OSTYPE in
+    darwin* )
+      system_profiler SPHardwareDataType
+      ;;
+    linux* )
+      cat /proc/cpuinfo
+      ;;
+    msys* )
+      ;;
+    * )
+      ;;
+  esac
+}
+
 function gstashlog() {
   git fsck --no-reflog | awk '/dangling commit/ {print $3}' > dangling_commit
   git log --oneline `cat dangling_commit` | grep 'WIP on'
