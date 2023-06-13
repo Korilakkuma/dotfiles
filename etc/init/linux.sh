@@ -13,8 +13,10 @@ sudo apt -y install build-essential
 sudo apt -y install clang-format
 sudo apt -y install curl
 sudo apt -y install ffmpeg
+sudo apt -y install gccgo-go
 sudo apt -y install gimp
 sudo apt -y install git
+sudo apt -y install golang-go
 sudo apt -y install htop
 sudo apt -y install imagemagick
 sudo apt -y install inkscape
