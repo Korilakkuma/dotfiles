@@ -42,6 +42,9 @@ Plugin 'prabirshrestha/asyncomplete-lsp.vim'
 Plugin 'hrsh7th/vim-vsnip'
 Plugin 'hrsh7th/vim-vsnip-integ'
 
+" CMake
+Plugin 'pboettch/vim-cmake-syntax'
+
 " Edit
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'nathanaelkane/vim-indent-guides'
