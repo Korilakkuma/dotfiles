@@ -52,6 +52,7 @@ brew install --cask iterm2
 brew install --cask microsoft-edge
 brew install --cask opera
 brew install --cask slack
+brew install --cask utm
 
 curl -fsSL https://fnm.vercel.app/install | zsh
 curl -fsSL https://get.deta.dev/cli.sh | sh
