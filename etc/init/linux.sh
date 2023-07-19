@@ -25,6 +25,7 @@ sudo apt -y install libtool
 sudo apt -y install lv
 sudo apt -y install net-tools
 sudo apt -y install tmux
+sudo apt -y install traceroute
 sudo apt -y install vim
 sudo apt -y install zsh
 
