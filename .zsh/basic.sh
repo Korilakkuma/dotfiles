@@ -26,7 +26,7 @@ set -C
 alias dmesg="sudo dmesg"
 alias finderhp="defaults write com.apple.finder _FXShowPosixPathInTitle 0 && killall finder"
 alias findersp="defaults write com.apple.finder _FXShowPosixPathInTitle 1 && killall finder"
-alias global="curl ifconfig.moe"
+alias global="echo $(curl ipecho.net/plain)"
 alias glog="git log --oneline --pretty=format:'%h [%ad] %d %s <%an>' --date=format:'%Y-%m-%d %H:%M:%S'"
 alias grep="grep --color=auto"
 alias hugod="hugo server"
