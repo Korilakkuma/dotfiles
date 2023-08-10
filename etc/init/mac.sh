@@ -14,6 +14,7 @@ brew install composer
 brew install coreutils
 brew install docker
 brew install ffmpeg
+brew install fzy
 # brew install gawk
 brew install gdb
 brew install git
