@@ -14,12 +14,10 @@ sudo apt -y install clang-format
 sudo apt -y install curl
 sudo apt -y install ffmpeg
 sudo apt -y install gccgo-go
-sudo apt -y install gimp
 sudo apt -y install git
 sudo apt -y install golang-go
 sudo apt -y install htop
 sudo apt -y install imagemagick
-sudo apt -y install inkscape
 sudo apt -y install intltool intltool-debian  # for GNU gettext library
 sudo apt -y install libtool
 sudo apt -y install lv
@@ -28,6 +26,9 @@ sudo apt -y install tmux
 sudo apt -y install traceroute
 sudo apt -y install vim
 sudo apt -y install zsh
+
+sudo snap install gimp
+sudo snap install inkscape
 
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 curl -fsSL https://get.deta.dev/cli.sh | sh
