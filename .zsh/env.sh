@@ -28,6 +28,7 @@ esac
 
 # for Apple Silicon
 export PATH=/opt/homebrew/bin:$PATH
+export PATH=/opt/homebrew/opt/unzip/bin:$PATH
 
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/go/bin:$PATH

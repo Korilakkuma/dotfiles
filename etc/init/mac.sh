@@ -38,6 +38,7 @@ brew install simh
 brew install telnet
 brew install tmux
 brew install tree
+brew install unzip  # for CP932
 brew install vim
 brew install wget
 brew install xquartz
