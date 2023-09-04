@@ -27,11 +27,11 @@ case $OSTYPE in
 esac
 
 # for Apple Silicon
-export PATH=$PATH:/opt/homebrew/bin
+export PATH=/opt/homebrew/bin:$PATH
 
-export PATH=$PATH:/usr/local/bin
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:$HOME/.composer/vendor/bin
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/go/bin:$PATH
+export PATH=$HOME/.composer/vendor/bin:$PATH
 
 go env -w GOPATH="$HOME/.go"
 
