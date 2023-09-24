@@ -34,6 +34,7 @@ brew install nkf
 brew install pkgconfig
 brew install pstree
 brew install qemu
+brew install shellcheck
 brew install simh
 brew install telnet
 brew install tmux

@@ -23,6 +23,7 @@ sudo apt -y install intltool intltool-debian  # for GNU gettext library
 sudo apt -y install libtool
 sudo apt -y install lv
 sudo apt -y install net-tools
+sudo apt -y install shellcheck
 sudo apt -y install tmux
 sudo apt -y install traceroute
 sudo apt -y install vim
