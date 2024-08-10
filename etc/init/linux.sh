@@ -20,6 +20,7 @@ sudo apt -y install golang-go
 sudo apt -y install htop
 sudo apt -y install imagemagick
 sudo apt -y install intltool intltool-debian  # for GNU gettext library
+sudo apt -y install iverilog
 sudo apt -y install libncurses5-dev libncursesw5-dev
 sudo apt -y install libtool
 sudo apt -y install lv

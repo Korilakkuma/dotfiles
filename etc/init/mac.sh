@@ -22,6 +22,7 @@ brew install gnu-sed
 brew install go
 brew install htop
 brew install hugo
+brew install icarus-verilog
 brew install imagemagick
 brew install jq
 brew install libomp
