@@ -69,15 +69,15 @@ function cpuinfo() {
 
 function gstashlog() {
   git fsck --no-reflog | awk '/dangling commit/ {print $3}' > dangling_commit
-  git log --oneline `cat dangling_commit` | grep 'WIP on'
+  git log --oneline "$(cat dangling_commit)" | grep 'WIP on'
 }
 
 function gstashapply() {
-  git stash apply $1
+  git stash apply "$1"
 }
 
 function gdbcert() {
-  codesign -s gdbcert `which gdb`
+  codesign -s gdbcert "$(which gdb)"
 }
 
 function llvm() {
@@ -88,37 +88,37 @@ function llvm() {
 }
 
 function mcleanup() {
-  for SOURCE in $@
+  for SOURCE in "$@"
   do
-    if [ -f ${SOURCE} ]
+    if [ -f "${SOURCE}" ]
     then
-      TARGET=$(echo ${SOURCE} | sed 's/^\(.*\)\.cp\{0,2\}$/\1/')
+      TARGET=$(echo "${SOURCE}" | sed 's/^\(.*\)\.cp\{0,2\}$/\1/')
 
-      if [ -x ${TARGET} ]
+      if [ -x "${TARGET}" ]
       then
         echo "rm -f ${TARGET}"
-        rm -f ${TARGET}
+        rm -f "${TARGET}"
       fi
     fi
   done
 }
 
 function mgcc() {
-  for SOURCE in $@
+  for SOURCE in "$@"
   do
-    if [ -f ${SOURCE} ]
+    if [ -f "${SOURCE}" ]
     then
-      TARGET=$(basename ${SOURCE} ".c")
+      TARGET=$(basename "${SOURCE}" ".c")
 
       case ${TARGET} in
         *\.cpp )
-          TARGET=$(basename ${SOURCE} ".cpp")
+          TARGET=$(basename "${SOURCE}" ".cpp")
           echo "g++ -std=c++11 -O2 -Wall -o ${TARGET} ${SOURCE}"
-          g++ -std=c++11 -O2 -Wall -o ${TARGET} ${SOURCE}
+          g++ -std=c++11 -O2 -Wall -o "${TARGET}" "${SOURCE}"
           ;;
         * )
           echo "gcc -std=c99 -O2 -Wall -o ${TARGET} ${SOURCE}"
-          gcc -std=c99 -O2 -Wall -o ${TARGET} ${SOURCE}
+          gcc -std=c99 -O2 -Wall -o "${TARGET}" "${SOURCE}"
           ;;
       esac
     fi
@@ -127,13 +127,13 @@ function mgcc() {
 
 function starlist() {
   case $1 in
-    -l ) echo $(xsound1) $(xsound2) | jq -r '.[]|[.user]' ;;
-    -n ) echo $(xsound1) $(xsound2) | jq -r '.[]|.starred_at' | wc -l ;;
-     * ) echo $(xsound1) $(xsound2) | jq -r '.[]' ;;
+    -l ) echo "$(xsound1) $(xsound2)" | jq -r '.[]|[.user]' ;;
+    -n ) echo "$(xsound1) $(xsound2)" | jq -r '.[]|.starred_at' | wc -l ;;
+     * ) echo "$(xsound1) $(xsound2)" | jq -r '.[]' ;;
   esac
 }
 
-if [ ! -e $HISTFILE ]
+if [ ! -e "${HISTFILE}" ]
 then
-    touch $HISTFILE
+    touch "${HISTFILE}"
 fi

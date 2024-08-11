@@ -34,6 +34,6 @@ export PATH=$HOME/.composer/vendor/bin:$PATH
 
 go env -w GOPATH="$HOME/.go"
 
-HISTFILE=$HOME/.zsh_history
-HISTSIZE=1000000
-SAVEHIST=1000000
+export HISTFILE=$HOME/.zsh_history
+export HISTSIZE=1000000
+export SAVEHIST=1000000
