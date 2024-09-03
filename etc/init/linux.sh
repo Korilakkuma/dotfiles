@@ -17,6 +17,7 @@ sudo apt -y install ffmpeg
 sudo apt -y install gccgo-go
 sudo apt -y install git
 sudo apt -y install golang-go
+sudo apt -y install gtkwave
 sudo apt -y install htop
 sudo apt -y install imagemagick
 sudo apt -y install intltool intltool-debian  # for GNU gettext library

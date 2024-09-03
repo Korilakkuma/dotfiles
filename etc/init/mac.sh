@@ -52,6 +52,7 @@ brew install --cask docker
 brew install --cask firefox
 brew install --cask google-chrome
 brew install --cask google-chrome-canary
+brew install --cask gtkwave
 brew install --cask iterm2
 brew install --cask microsoft-edge
 brew install --cask opera
