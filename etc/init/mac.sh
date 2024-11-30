@@ -35,6 +35,7 @@ brew install nkf
 brew install pkgconfig
 brew install pstree
 brew install qemu
+brew install rust-analyzer  # Then, `rustup component add rls rust-analysis rust-src`
 brew install shellcheck
 brew install simh
 brew install telnet
