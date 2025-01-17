@@ -36,4 +36,3 @@ sudo snap install gimp
 sudo snap install inkscape
 
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
-curl -fsSL https://get.deta.dev/cli.sh | sh

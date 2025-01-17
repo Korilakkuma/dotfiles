@@ -61,7 +61,6 @@ brew install --cask slack
 brew install --cask utm
 
 curl -fsSL https://fnm.vercel.app/install | zsh
-curl -fsSL https://get.deta.dev/cli.sh | sh
 
 PROCESSOR=$(uname -p)
 
