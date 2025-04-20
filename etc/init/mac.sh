@@ -19,6 +19,7 @@ brew install fzy
 brew install gdb
 brew install git
 brew install gnu-sed
+brew install gnupg pinentry-mac
 brew install go
 brew install htop
 brew install hugo
