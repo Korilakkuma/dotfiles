@@ -13,6 +13,7 @@ brew install cmake
 brew install composer
 brew install coreutils
 brew install docker
+brew install eza
 brew install ffmpeg
 brew install fzy
 # brew install gawk
