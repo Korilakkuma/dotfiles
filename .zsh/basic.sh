@@ -137,3 +137,15 @@ if [ ! -e "${HISTFILE}" ]
 then
     touch "${HISTFILE}"
 fi
+
+if [ -f "${HOME}/GitHub/emsdk/emsdk_env.sh" ]
+then
+  source "${HOME}/GitHub/emsdk/emsdk_env.sh"
+else
+  cd "${HOME}/GitHub" || exit
+  git clone git@github.com:emscripten-core/emsdk.git
+  cd emsdk || exit
+  ./emsdk install latest
+  ./emsdk activate latest
+  cd "${HOME}/GitHub" || exit
+fi
