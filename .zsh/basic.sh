@@ -46,6 +46,7 @@ alias visudo="sudo visudo"
 alias words="tr -cs a-zA-Z0-9 \"[\n*]\""
 alias xsound1="curl --silent 'https://api.github.com/repos/Korilakkuma/XSound/stargazers?page=1&per_page=100' --header 'Accept: application/vnd.github.v3.star+json'"
 alias xsound2="curl --silent 'https://api.github.com/repos/Korilakkuma/XSound/stargazers?page=2&per_page=100' --header 'Accept: application/vnd.github.v3.star+json'"
+alias xsound3="curl --silent 'https://api.github.com/repos/Korilakkuma/XSound/stargazers?page=3&per_page=100' --header 'Accept: application/vnd.github.v3.star+json'"
 
 function ccomp() {
   rm -rf ~/.zcompdump
@@ -127,9 +128,9 @@ function mgcc() {
 
 function starlist() {
   case $1 in
-    -l ) echo "$(xsound1) $(xsound2)" | jq -r '.[]|[.user]' ;;
-    -n ) echo "$(xsound1) $(xsound2)" | jq -r '.[]|.starred_at' | wc -l ;;
-     * ) echo "$(xsound1) $(xsound2)" | jq -r '.[]' ;;
+    -l ) echo "$(xsound1) $(xsound2) $(xsound3)" | jq -r '.[]|[.user]' ;;
+    -n ) echo "$(xsound1) $(xsound2) $(xsound3)" | jq -r '.[]|.starred_at' | wc -l ;;
+     * ) echo "$(xsound1) $(xsound2) $(xsound3)" | jq -r '.[]' ;;
   esac
 }
 
