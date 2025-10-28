@@ -67,6 +67,8 @@ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
 
 PROCESSOR=$(uname -p)
 
+git clone --depth=1 https://github.com/github/copilot.vim.git ~/.vim/pack/github/start/copilot.vim
+
 if [ "${PROCESSOR}" = "arm" ]
 then
   softwareupdate --install-rosetta
