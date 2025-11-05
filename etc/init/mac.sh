@@ -18,6 +18,7 @@ brew install ffmpeg
 brew install fzy
 # brew install gawk
 brew install gdb
+brew install gh
 brew install git
 brew install gnu-sed
 brew install gnupg pinentry-mac

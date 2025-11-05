@@ -15,6 +15,7 @@ sudo apt -y install curl
 sudo apt -y install docker.io
 sudo apt -y install ffmpeg
 sudo apt -y install gccgo-go
+sudo apt -y install gh
 sudo apt -y install git
 sudo apt -y install golang-go
 sudo apt -y install gtkwave
