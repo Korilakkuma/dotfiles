@@ -9,5 +9,11 @@ deploy            :
 init              :
 	bash ./etc/init/install.sh
 
+maintenance       :
+	rm -rf $(HOME)/.npm/_cacache
+	command -v brew cleanup           > /dev/null 2>&1 && brew cleanup
+	# command -v cargo clean            > /dev/null 2>&1 && cargo clean  # If needed
+	command -v docker system prune -f > /dev/null 2>&1 && docker system prune -f
+
 clean             :
 	@$(foreach val, $(DOTFILES_FILES), if [ -L $(HOME)/$(val) ]; then rm -rf $(HOME)/$(val); fi;)
