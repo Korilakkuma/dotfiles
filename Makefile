@@ -10,4 +10,4 @@ init              :
 	bash ./etc/init/install.sh
 
 clean             :
-	@$(foreach val, $(DOTFILES_FILES), rm -rf $(HOME)/$(val);)
+	@$(foreach val, $(DOTFILES_FILES), if [ -L $(HOME)/$(val) ]; then rm -rf $(HOME)/$(val); fi;)
