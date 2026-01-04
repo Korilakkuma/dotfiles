@@ -1,4 +1,11 @@
-source $ZPLUG_HOME/init.zsh
+if [ ! -d ${ZPLUG_HOME} ]
+then
+  ZPLUG_HOME=/opt/homebrew/opt/zplug
+fi
+
+echo ${ZPLUG_HOME}
+
+source "${ZPLUG_HOME}/init.zsh"
 
 # command
 zplug "zsh-users/zsh-autosuggestions"
