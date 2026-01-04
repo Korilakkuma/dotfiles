@@ -67,11 +67,11 @@ brew install --cask utm
 curl -fsSL https://fnm.vercel.app/install | zsh
 curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
 
-PROCESSOR=$(uname -p)
+PROCESSOR=$(uname -m)
 
 git clone --depth=1 https://github.com/github/copilot.vim.git ~/.vim/pack/github/start/copilot.vim
 
-if [ "${PROCESSOR}" = "arm" ]
+if [ "${PROCESSOR}" = "arm64" ]
 then
   softwareupdate --install-rosetta
 fi

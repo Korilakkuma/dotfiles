@@ -4,9 +4,9 @@ export CLICOLOR=1
 
 case $OSTYPE in
   darwin* )
-    PROCESSOR=$(uname -p)
+    PROCESSOR=$(uname -m)
 
-    if [ "${PROCESSOR}" = "arm" ]
+    if [ "${PROCESSOR}" = "arm64" ]
     then
       # Apple Silicon
       export ZPLUG_HOME=/opt/homebrew/opt/zplug
