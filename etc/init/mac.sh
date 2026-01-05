@@ -7,6 +7,7 @@ brew update
 brew upgrade
 
 brew install binutils
+brew install cargo-binstall
 brew install clang-format
 brew install cloc
 brew install cmake
@@ -38,7 +39,7 @@ brew install nkf
 brew install pkgconfig
 brew install pstree
 brew install qemu
-brew install rust-analyzer  # Then, `rustup component add rls rust-analysis rust-src`
+brew install sccache
 brew install shellcheck
 brew install simh
 brew install telnet
@@ -66,6 +67,10 @@ brew install --cask utm
 
 curl -fsSL https://fnm.vercel.app/install | zsh
 curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+
+source "$HOME/.cargo/env"
+
+rustup component add rust-src
 
 PROCESSOR=$(uname -m)
 
