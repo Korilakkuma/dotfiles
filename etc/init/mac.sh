@@ -73,5 +73,5 @@ git clone --depth=1 https://github.com/github/copilot.vim.git ~/.vim/pack/github
 
 if [ "${PROCESSOR}" = "arm64" ]
 then
-  softwareupdate --install-rosetta
+  softwareupdate --install-rosetta --agree-to-license
 fi
