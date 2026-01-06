@@ -29,6 +29,7 @@ alias findersp="defaults write com.apple.finder _FXShowPosixPathInTitle 1 && kil
 alias global="echo $(curl ipecho.net/plain)"
 alias glog="git log --oneline --pretty=format:'%h [%ad] %d %s <%an>' --date=format:'%Y-%m-%d %H:%M:%S'"
 alias grep="grep --color=auto"
+alias hal="echo '/Library/Audio/Plug-Ins/HAL/'"
 alias hugod="hugo server"
 alias inet="ifconfig -a | grep -Eo --color=never 'inet [0-9.]+'"
 alias less="less -M"
