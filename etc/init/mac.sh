@@ -13,7 +13,6 @@ brew install cloc
 brew install cmake
 brew install composer
 brew install coreutils
-brew install docker
 brew install eza
 brew install ffmpeg
 brew install fzy
@@ -53,7 +52,6 @@ brew install zplug
 brew install zsh
 
 brew install --cask adobe-creative-cloud
-brew install --cask docker
 brew install --cask firefox
 brew install --cask google-chrome
 brew install --cask google-chrome-canary
@@ -61,6 +59,7 @@ brew install --cask gtkwave
 brew install --cask iterm2
 brew install --cask microsoft-edge
 brew install --cask opera
+brew install --cask orbstack
 brew install --cask servo
 brew install --cask slack
 brew install --cask utm
