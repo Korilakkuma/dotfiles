@@ -1,19 +1,19 @@
 function hex2decimal() {
-  NUM=$(echo $1 | tr '[a-f]' '[A-F]')
-  echo 16i ${NUM} p | dc
+  NUM=$(echo "$1" | tr 'a-f' 'A-F')
+  echo 16i "${NUM}" p | dc
 }
 
 function decimal2hex() {
-  echo 16o $1 p | dc
+  echo 16o "$1" p | dc
 }
 
 function trim() {
-  STRING=$(echo $1)
-  echo ${STRING}
+  STRING=$(echo "$1")
+  echo "${STRING}"
 }
 
 function isnumeric() {
-  expr $1 + 1 > /dev/null 2>&1
+  expr "$1" + 1 > /dev/null 2>&1
 
   if [ $? -lt 2 ]
   then
@@ -24,19 +24,19 @@ function isnumeric() {
 }
 
 function strlen() {
-  case $1 in
+  case "$1" in
     ? ) echo 1 ;;
-    * ) expr $1 : '.*' ;;
+    * ) expr "$1" : '.*' ;;
   esac
 }
 
 function touppercasefirst() {
-  FIRST_CHAR=$(expr $1 : '\(.\).*')
-  REST_CHARS=$(expr $1 : '.\(.*\)')
+  FIRST_CHAR=$(expr "$1" : '\(.\).*')
+  REST_CHARS=$(expr "$1" : '.\(.*\)')
 
-  UPPER_FIRST_CHAR=$(echo "${FIRST_CHAR}" | tr a-z A-Z)
+  UPPER_FIRST_CHAR=$(echo "${FIRST_CHAR}" | tr 'a-z' 'A-Z')
 
-  echo ${UPPER_FIRST_CHAR}${REST_CHARS}
+  echo "${UPPER_FIRST_CHAR}${REST_CHARS}"
 }
 
 function bell() {
