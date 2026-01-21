@@ -17,3 +17,9 @@ maintenance       :
 
 clean             :
 	@$(foreach val, $(DOTFILES_FILES), if [ -L $(HOME)/$(val) ]; then rm -rf $(HOME)/$(val); fi;)
+
+help              :
+	@echo "make clean         -- Remove Symbolic links to dotfiles from home directory --"
+	@echo "make deploy        -- Create Symbolic links to dotfiles at home directory --"
+	@echo "make init          -- Install package manager, packages and applications every OS (macOS, Linux, Windows) --"
+	@echo "make maintenance   -- Increase empty capacity on SSD by removing cache files ... etc --"
